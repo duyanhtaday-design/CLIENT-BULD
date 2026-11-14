@@ -15,9 +15,6 @@ dependencies {
     minecraft "com.mojang:minecraft:1.21.11"
     mappings "net.fabricmc:yarn:1.21.11+build.1:v2"
     modImplementation "net.fabricmc:fabric-loader:0.16.5"
-    
-    // Dùng compileOnly để GitHub Actions không bắt buộc phải tải gói API này từ mạng về
-    modCompileOnly "net.fabricmc.fabric-api:fabric-api:0.100.0+1.21.11"
 }
 
 java {
