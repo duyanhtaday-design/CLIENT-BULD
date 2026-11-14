@@ -1,3 +1,4 @@
+repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
 plugins { id 'fabric-loom' version '1.14-SNAPSHOT' }
 
 version = project.mod_version
