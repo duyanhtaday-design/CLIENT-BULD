@@ -2,15 +2,12 @@ plugins {
     id 'fabric-loom' version '1.14-SNAPSHOT'
     id 'maven-publish'
 }
-
 version = '1.0.0'
 group = 'com.autobuilderplus'
-
 repositories {
     mavenCentral()
     maven { url 'https://maven.fabricmc.net/' }
 }
-
 dependencies {
     minecraft "com.mojang:minecraft:1.21.11"
     mappings "net.fabricmc:yarn:1.21.11+build.1:v2"
@@ -20,16 +17,7 @@ java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(21)
     }
-    withSourcesJar()
 }
-
-tasks.withType(JavaCompile).configureEach {
-    options.release = 21
-}
-
 jar {
     from sourceSets.main.output
-    from("LICENSE") {
-        rename { "${it}_${project.base.archivesName.get()}" }
-    }
 }
